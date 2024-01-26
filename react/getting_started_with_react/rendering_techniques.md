@@ -101,6 +101,11 @@ function App() {
 }
 ~~~
 
+<div class="lesson-note" markdown="1">
+  Be aware: If you see the red error lines appearing under your props, and the warning message "{prop} is missing in props validation" this is eslint expecting prop types. 
+  You can safely ignore it, or if you want the error messages to go away, you can add `"react/prop-types": "off",` to your .eslint.cjs file
+</div>
+
 We have moved our `<ul>` element to a different component called `<List />`. It still returns the `<ul>` element, but we can do a lot more with it as a component.
 
 This component accepts a `props` which is an object containing the `animals` that we defined as a property when we wrote `<List animals={animals} />`. Do note that you can name it anything, for example, `<List animalList={animals} />`. You will still need to pass the animals to the property, but now you will use `props.animalList` instead of `props.animals`.
